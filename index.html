@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>One Page — Samruddhi Velapurkar</title>
+  <meta name="description" content="A single-page portfolio by Samruddhi Velapurkar showcasing HTML, SCSS, and JavaScript features." />
+</head>
+<body>
+  <!-- ===== Sticky / Resizing Navbar with Position Indicator ===== -->
+  <header id="top">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__inner">
+        <a class="brand" href="#hero" data-nav>Samruddhi Velapurkar</a>
+
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="nav__bar"></span><span class="nav__bar"></span><span class="nav__bar"></span>
+        </button>
+
+        <ul class="nav__links">
+          <li><a href="#portfolio" data-nav data-section="portfolio">Portfolio</a></li>
+          <li><a href="#about" data-nav data-section="about">About</a></li>
+          <li><a href="#carousel" data-nav data-section="carousel">Carousel</a></li>
+          <li><a href="#features" data-nav data-section="features">Highlights</a></li>
+          <li><a href="#parallax" data-nav data-section="parallax">Backdrop</a></li>
+          <li><a href="#video" data-nav data-section="video">Video</a></li>
+          <li><a href="#contact" data-nav data-section="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__progress" aria-hidden="true"><span></span></div>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="hero" class="stripe stripe--hero" aria-label="Hero">
+    <div class="hero__content">
+      <img src="assets/sv55.jpeg" alt="Samruddhi Velapurkar portrait" class="hero__avatar" />
+      <h1 class="hero__title">Hi, I’m Samruddhi</h1>
+      <p class="hero__subtitle">Web Developer · Creative Technologist · UX Enthusiast</p>
+      <a class="btn btn--primary" href="#portfolio" data-nav>View My Work</a>
+    </div>
+  </section>
+
+  <!-- ===== Portfolio ===== -->
+  <section id="portfolio" class="stripe stripe--portfolio">
+    <h2 class="section-title">Portfolio</h2>
+
+    <div class="grid">
+      <button class="tile" data-modal-target="m1">
+        <span class="tile__zoom">+</span>
+        <img src="assets/Interactive-UI.jpg" alt="Interactive UI project tile" />
+        <span class="tile__caption">Interactive UI</span>
+      </button>
+
+      <button class="tile" data-modal-target="m2">
+        <span class="tile__zoom">+</span>
+        <img src="assets/data-dashboard.jpg" alt="Data Dashboard project tile" />
+        <span class="tile__caption">Data Dashboard</span>
+      </button>
+
+      <button class="tile" data-modal-target="m3">
+        <span class="tile__zoom">+</span>
+        <img src="assets/animation-showcase.jpg" alt="Animation Showcase project tile" />
+        <span class="tile__caption">Animation Showcase</span>
+      </button>
+
+      <button class="tile" data-modal-target="m4">
+        <span class="tile__zoom">+</span>
+        <img src="assets/landing-page.jpg" alt="Landing Page project tile" />
+        <span class="tile__caption">Landing Page</span>
+      </button>
+
+      <button class="tile" data-modal-target="m5">
+        <span class="tile__zoom">+</span>
+        <img src="assets/visualization.jpg" alt="Visualization project tile" />
+        <span class="tile__caption">Visualization</span>
+      </button>
+
+      <button class="tile" data-modal-target="m6">
+        <span class="tile__zoom">+</span>
+        <img src="assets/portfolio.jpg" alt="Portfolio V2 project tile" />
+        <span class="tile__caption">Portfolio V2</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="stripe stripe--about">
+    <h2 class="section-title">About Me</h2>
+    <div class="columns">
+      <p>I’m a UIUC student passionate about crafting responsive and accessible web experiences. This project demonstrates how much can be done with pure HTML, SCSS, and JavaScript—no libraries.</p>
+      <p>Every effect on this page—from the sticky shrinking navbar to modals and the carousel—is coded manually for clarity and maintainability.</p>
+      <p>My broader interest lies in combining design thinking and technical execution to deliver intuitive, human-centered interfaces.</p>
+    </div>
+    <div class="about__cta"><a class="btn" href="#contact" data-nav>Let’s Connect</a></div>
+  </section>
+
+  <!-- ===== Carousel ===== -->
+  <section id="carousel" class="stripe stripe--carousel">
+    <h2 class="section-title">Carousel</h2>
+    <div class="carousel" tabindex="0" aria-label="Carousel section">
+      <button class="carousel__ctrl prev" type="button" aria-label="Previous slide">‹</button>
+
+      <div class="carousel__viewport">
+        <div class="carousel__track">
+          <div class="slide"><div class="slide__inner">Designed for UX on any screen size</div></div>
+          <div class="slide"><div class="slide__inner">Vanilla JS · No Frameworks</div></div>
+          <div class="slide"><div class="slide__inner">Built by Samruddhi Velapurkar</div></div>
+        </div>
+      </div>
+
+      <button class="carousel__ctrl next" type="button" aria-label="Next slide">›</button>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section id="features" class="stripe stripe--features">
+    <h2 class="section-title">Highlights</h2>
+    <div class="features">
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12l4 4 8-8 8 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Accessible</h3>
+        <p>Keyboard navigable and ARIA-labeled for usability.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Responsive</h3>
+        <p>Fluid typography and adaptive grids for all devices.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Performant</h3>
+        <p>Lightweight assets and smooth scrolling animations.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Parallax ===== -->
+  <section id="parallax" class="stripe stripe--parallax">
+    <div class="parallax__inner">
+      <h2 class="section-title section-title--inverted">Fixed Background</h2>
+      <p class="muted">Scroll and watch the background stay put.</p>
+    </div>
+  </section>
+
+  <!-- ===== Video ===== -->
+  <section id="video" class="stripe stripe--video">
+    <h2 class="section-title">Demo Video</h2>
+    <video controls preload="metadata" width="960" class="video">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="stripe stripe--contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <form class="form" novalidate>
+      <div class="form__row"><label for="name">Name</label><input id="name" type="text" placeholder="Your name" required /></div>
+      <div class="form__row"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com" required /></div>
+      <div class="form__row"><label for="msg">Message</label><textarea id="msg" rows="4" placeholder="Hi Samruddhi!"></textarea></div>
+      <button class="btn btn--primary" type="submit">Send</button>
+    </form>
+
+    <div class="social" aria-label="Social links">
+      <a href="https://github.com/" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4..." /></svg>
+      </a>
+      <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 0 ..." /></svg>
+      </a>
+      <a href="https://x.com/" aria-label="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7 8.1L23.3 22H16..." /></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Samruddhi Velapurkar · Built for CS409 MP#1 (HTML + SCSS + JS)</p>
+  </footer>
+
+  <!-- ===== Modals ===== -->
+  <div class="modal" id="m1">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/Interactive-UI.jpg" alt="Interactive UI project screenshot" class="modal__image" loading="lazy" />
+      <h3>Interactive UI</h3>
+      <p>Custom UI animations and transitions without libraries.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="m2">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/data-dashboard.jpg" alt="Data Dashboard project screenshot" class="modal__image" loading="lazy" />
+      <h3>Data Dashboard</h3>
+      <p>Responsive charts and cards built with vanilla JS.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="m3">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/animation-showcase.jpg" alt="Animation Showcase project screenshot" class="modal__image" loading="lazy" />
+      <h3>Animation Showcase</h3>
+      <p>Pure CSS keyframes for interactive feedback.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="m4">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/landing-page.jpg" alt="Landing Page project screenshot" class="modal__image" loading="lazy" />
+      <h3>Landing Page</h3>
+      <p>Marketing page with fixed background sections.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="m5">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/visualization.jpg" alt="Visualization project screenshot" class="modal__image" loading="lazy" />
+      <h3>Visualization</h3>
+      <p>Canvas-based data rendering and scroll animation.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="m6">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close aria-label="Close modal">×</button>
+      <img src="assets/portfolio.jpg" alt="Portfolio V2 project screenshot" class="modal__image" loading="lazy" />
+      <h3>Portfolio V2</h3>
+      <p>Second iteration of this design with new features.</p>
+    </div>
+  </div>
+</body>
+</html>
